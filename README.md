@@ -2,6 +2,7 @@
 
 In this series you will learn what Gaussian Processes are and how to apply them in order to solve real world problems!
 
+![image](https://github.com/anarojoecheburua/Gaussian-Processes---The-Basics-APP/assets/66911701/abaf7195-3b49-42a1-b193-8b678c5d1cc8)
 --- 
 
 **What are Gaussian Processes - PART 1** </br>
@@ -13,6 +14,7 @@ I've created a Streamlit App that allows you to explore Gaussian Processes and v
 
 **[TBC] - PART 3** </br>
 [TBC]
+
 
 ---
 
