@@ -12,11 +12,22 @@ In this series you will learn what Gaussian Processes are and how to apply them 
 Introduction to Gaussian Processes, Bayes Theorem, Non-parametric Models and Applications. 
 I've created a Streamlit App that allows you to explore Gaussian Processes and visualise their behaviour.
 
+YouTube: [TBC]
+Written tutorial: [TBC]
+
 **The Kernel Cookbook - PART 2** </br>
-[TBC]
+Exploration of different kernels, combinatiosn and covariance matrices. 
+I've created a Streamlit App that allows you to explore how different kernels with different values for their hyperparameters affect prior and posterior distrubitions of a Gaussian Process.
+
+YouTube: [TBC]
+Written tutorial: [TBC]
+
 
 **[TBC] - PART 3** </br>
 [TBC]
+
+YouTube: [TBC]
+Written tutorial: [TBC]
 
 
 ---
@@ -25,7 +36,7 @@ I've created a Streamlit App that allows you to explore Gaussian Processes and v
 
 ### Prerequisites
 
-Before using the Streamlit App, make sure you have the following prerequisites installed:
+Before using the different Streamlit Apps, make sure you have the following prerequisites installed:
 
 - Python
 - Streamlit
