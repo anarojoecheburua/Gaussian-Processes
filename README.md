@@ -12,15 +12,15 @@ In this series you will learn what Gaussian Processes are and how to apply them 
 Introduction to Gaussian Processes, Bayes Theorem, Non-parametric Models and Applications. 
 I've created a Streamlit App that allows you to explore Gaussian Processes and visualise their behaviour.
 
-YouTube: [TBC]
-Written tutorial: [TBC]
+- YouTube: https://www.youtube.com/watch?v=71e6xfxrIRs&t=31s
+- Written tutorial: https://www.digilab.co.uk/posts/what-are-gaussian-processes
 
 **The Kernel Cookbook - PART 2** </br>
 Exploration of different kernels, combinatiosn and covariance matrices. 
-I've created a Streamlit App that allows you to explore how different kernels with different values for their hyperparameters affect prior and posterior distrubitions of a Gaussian Process.
+I've created a Streamlit App that allows you to explore how different kernels with different values for their hyperparameters affect prior and posterior distrubitions of a Gaussian Process as well as their 3d surface representation.
 
-YouTube: [TBC]
-Written tutorial: [TBC]
+- YouTube: https://www.youtube.com/watch?v=-FB4DZzyH80&t=237s
+- Written tutorial: https://www.digilab.co.uk/posts/the-kernel-cookbook
 
 
 **[TBC] - PART 3** </br>
