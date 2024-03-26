@@ -45,7 +45,7 @@ Before using the different Streamlit Apps, make sure you have the following prer
 ### Installation
 - Clone this repository to your local machine
 - Install the required packages from the `requirements.txt` file
-- Run the application on Streamlit
+- Run the application on Streamlit / Juputer Notebook
 
 ## Usage
 - Run the application using the instructions provided in the Installation section.
