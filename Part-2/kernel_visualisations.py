@@ -2,36 +2,36 @@ import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
 from scipy.special import gamma, kv
+import matplotlib.pyplot as plt
+
 
 def tab1():
-    def linear_kernel(x1, x2):
-        return np.dot(x1, x2.T)
-
-    def generate_surface_linear():
-        x = np.linspace(-5, 5, 100)
-        y = np.linspace(-5, 5, 100)
-        X, Y = np.meshgrid(x, y)
-        Z = np.zeros((100, 100))
-        for i in range(100):
-            for j in range(100):
-                Z[i, j] = linear_kernel(np.array([[X[i, j], Y[i, j]]]), np.array([[0, 0]]))
-        return X, Y, Z
 
     st.header('Linear Kernel')
     st.write("""
     This kernel represents a linear relationship between input variables and is computed as the dot product of input vectors.
     """)
 
-    X, Y, Z = generate_surface_linear()
+    # Define the function
+    def z_function(x, y):
+        return x * y
 
+    # Generate x and y values
+    x = np.linspace(-5, 5, 100)
+    y = np.linspace(-5, 5, 100)
+    X, Y = np.meshgrid(x, y)
+    Z = z_function(X, Y)
+
+    # Create 3D surface plot
     fig = go.Figure(data=[go.Surface(z=Z, x=X, y=Y)])
-    fig.update_layout(title='Surface of Linear Kernel',
-                    scene=dict(
-                        xaxis=dict(title='X', range=[-5, 5]),
-                        yaxis=dict(title='Y', range=[-5, 5]),
-                        zaxis=dict(title='Kernel Value', range=[np.min(Z), np.max(Z)])),  # Fixing the Z-axis range
-                    margin=dict(l=0, r=0, b=0, t=40))
-    st.plotly_chart(fig, use_container_width=True)
+
+    # Update layout
+    fig.update_layout(scene=dict(xaxis_title='X',
+                                yaxis_title='Y',
+                                zaxis_title='Z'))
+
+    # Streamlit display
+    st.plotly_chart(fig)
 
 
 def tab2():
@@ -48,21 +48,32 @@ def tab2():
                 Polynomial kernels are particularly useful for capturing non-linear relationships in data.
                 You can adjust the parameters 'c' and 'd' to explore different degrees and biases of polynomial features.''')
 
+        # Define the function
+        def z_function(x, y, c, d):
+            return (x * y + c) ** d
+
+        # Generate x and y values
+        x = np.linspace(-5, 5, 100)
+        y = np.linspace(-5, 5, 100)
+        X, Y = np.meshgrid(x, y)
+
+        # Choose parameters c and d
         c = st.slider("c", min_value=-10, max_value=10, value=0)
         d = st.slider("d", min_value=1, max_value=5, value=2)
-        num_points = 50
+        # Calculate Z values
+        Z = z_function(X, Y, c, d)
 
-        x, y, z = generate_data(c, d, num_points)
+        # Create 3D surface plot
+        fig = go.Figure(data=[go.Surface(z=Z, x=X, y=Y)])
 
-        fig = go.Figure(data=[go.Surface(x=x, y=y, z=z)])
-        fig.update_layout(title="Polynomial Kernel Surface Plot",
-                        scene=dict(
-                            xaxis=dict(title='X', range=[-10, 10]),
-                            yaxis=dict(title='Y', range=[-10, 10]),
-                            zaxis=dict(title='Kernel Value', range=[0, 500]),
-                        ))
+        # Update layout
+        fig.update_layout(scene=dict(xaxis_title='X',
+                                    yaxis_title='Y',
+                                    zaxis_title='Z'))
 
+        # Streamlit display
         st.plotly_chart(fig)
+
 
     if __name__ == "__main__":
         main()
@@ -98,7 +109,7 @@ def tab3():
                     scene=dict(
                         xaxis=dict(title='X', range=[-5, 5]),
                         yaxis=dict(title='Y', range=[-5, 5]),
-                        zaxis=dict(title='Kernel Value', range=[0, 2])),  # Adjust the range as needed
+                        zaxis=dict(title='Kernel Value', range=[0, 1])),  # Adjust the range as needed
                     margin=dict(l=0, r=0, b=0, t=40))
     st.plotly_chart(fig, use_container_width=True)
 
