@@ -16,18 +16,19 @@ I've created a Streamlit App that allows you to explore Gaussian Processes and v
 - Written tutorial: https://www.digilab.co.uk/posts/what-are-gaussian-processes
 
 **The Kernel Cookbook - PART 2** </br>
-Exploration of different kernels, combinatiosn and covariance matrices. 
+Exploration of different kernels, combinations and covariance matrices. 
 I've created a Streamlit App that allows you to explore how different kernels with different values for their hyperparameters affect prior and posterior distrubitions of a Gaussian Process as well as their 3d surface representation.
 
 - YouTube: https://www.youtube.com/watch?v=-FB4DZzyH80&t=237s
 - Written tutorial: https://www.digilab.co.uk/posts/the-kernel-cookbook
 
 
-**[TBC] - PART 3** </br>
-[TBC]
+**AutoML in twinLab - PART 3** </br>
+Discovering twinLab's AutoML functionalities for automatic kernel selection.
+I've created a notebook in where I explore kernels and how these affect the quantification of uncertainty and the evaluation metrics. I illustrate how to use AutoML to automatically select the kernel, aiming to enhance regression outcomes.
 
-YouTube: [TBC]
-Written tutorial: [TBC]
+- YouTube: https://youtu.be/n7mfjrDRbz4
+- Written tutorial: https://www.digilab.co.uk/posts/automl-in-twinlab
 
 
 ---
